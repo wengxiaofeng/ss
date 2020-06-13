@@ -1,3 +1,5 @@
+## 根据scrcpy和wfs做的手机投影web端demo服务端
+
 服务端口号：默认8888，Application里面可以修改
 
 scrcpy-server在根目录下，版本1.14
