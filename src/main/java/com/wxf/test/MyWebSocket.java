@@ -59,7 +59,7 @@ public class MyWebSocket {
         webSocketSet.add(this);     //加入set中
         addOnlineCount();           //在线数加1
         System.out.println("有新连接加入！当前在线人数为" + getOnlineCount());
-        scrcpy = new ScrServer(27183);
+        scrcpy = new ScrServer(12345);
         scrcpy.start(this);
     }
 
@@ -80,6 +80,7 @@ public class MyWebSocket {
      * @param message 客户端发送过来的消息*/
     @OnMessage
     public void onMessage(String message, Session session) {
+
         System.out.println("来自客户端的消息:" + message);
         try {
             OutputStream os = scrcpy.getStreamCollector().getSocketControl().getOutputStream();

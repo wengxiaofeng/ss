@@ -7,8 +7,12 @@ version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
-    mavenCentral()
+
+
+//    maven{ url 'https://www.dcm4che.org/maven2/'}
+
     maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    mavenCentral()
 }
 
 
@@ -34,8 +38,12 @@ buildscript {
     }
 
     repositories {
-        mavenCentral()
+//        maven{ url 'https://www.dcm4che.org/maven2/'}
+
+
         maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+
+        mavenCentral()
     }
 
     dependencies {
@@ -51,4 +59,13 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-websocket:1.3.5.RELEASE'
     compile "org.projectlombok:lombok:$lombokVersion"
     compile "com.alibaba:fastjson:$fastjsonVersion"
+    compile 'org.bytedeco:javacpp:1.1'
+//    compile 'org.bytedeco:javacv:1.1'
+//    compile 'org.boofcv:xuggler:0.23'
+    compile group: 'org.bytedeco', name: 'javacv-platform', version: '1.5.3'
+    compile files('lib/xuggler-xuggler-5.4.jar')
+    compile files('lib/xuggler.jar')
+    compile files('lib/org.xmind.core.jar')
+    compile 'org.jcodec:jcodec:0.2.3'
+
 }
